@@ -3,6 +3,7 @@ var app = express();
 var mysql = require('mysql')
 var port = process.env.PORT || 3000;
 var bodyParser = require('body-parser');
+require('dotenv').config();
 
 if (typeof localStorage === "undefined" || localStorage === null) {
     var LocalStorage = require('node-localstorage').LocalStorage;
@@ -16,7 +17,7 @@ var con = mysql.createConnection({
     database: process.env.DB,
     user: process.env.USER,
     host: process.env.HOST,
-    password: process.env.PASSWORD
+    password: ""
 });
 
 con.connect();
