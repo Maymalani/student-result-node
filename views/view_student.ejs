@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Student</title>
+</head>
+<body>
+    <h1>View Student</h1>
+    <table border="" cellspacing="0" cellpadding="10">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Standard</th>
+            <th>Division</th>
+            <th>Password</th>
+            <th>Roll Number</th>
+        </tr>
+        <%result.forEach(function(student){%>
+            <tr>
+                <td><%=student.id%></td>
+                <td><%=student.student_name%></td>
+                <td><%=student.student_email%></td>
+                <td><%=student.student_std%></td>
+                <td><%=student.student_div%></td>
+                <td><%=student.student_password%></td>
+                <td><%=student.student_roll_number%></td>
+            </tr>
+        <%})%>
+    </table>
+</body>
+</html>

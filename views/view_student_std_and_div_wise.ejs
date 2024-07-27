@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Student Std And Div Wise</title>
+</head>
+<body>
+    <h1>Select Student Std And Div</h1>
+    <form method="post">
+        <table>
+            <tr>
+                <td>Select Standard : </td>
+                <td>
+                    <select name="std">
+                        <option selected disabled>Select Standard</option>
+                        <%result.forEach(function(std){%>
+                            <option value="<%=std.std%>"><%=std.std%></option>
+                        <%})%>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Select Division : </td>
+                <td>
+                    <select name="div">
+                        <option selected disabled>Select Division</option>
+                        <%divResult.forEach(function(div){%>
+                            <option value="<%=div.division%>"><%=div.division%></option>
+                        <%})%>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="View Student"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

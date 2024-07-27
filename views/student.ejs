@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Departmant</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <button><a href="/student_logout">LogOut</a></button>
+    <h1>Welcome Back , <%=result[0].student_name%> </h1>
+    <table>
+        <tr>
+            <td>Name : </td>
+            <td><%=result[0].student_name%></td>
+        </tr>
+        <tr>
+            <td>Standard : </td>
+            <td><%=result[0].student_std%></td>
+        </tr>
+        <tr>
+            <td>Division : </td>
+            <td><%=result[0].student_div%></td>
+        </tr>
+        <tr>
+            <td>Roll No : </td>
+            <td><%=result[0].student_roll_number%></td>
+        </tr>
+        <tr>
+            <td>Result : </td>
+            <td>
+                <%if(result[0].student_result_status == 1){%>
+                    Pass <button><a href="/student_view_result/<%=result[0].student_name%>/<%=result[0].student_std%>/<%=result[0].student_div%>">View Result</a></button></td>
+                <%}else{%>
+                    Fail <button><a href="/student_view_result/<%=result[0].student_name%>/<%=result[0].student_std%>/<%=result[0].student_div%>">View Result</a></button></td>
+                <%}%>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Result All Student</title>
+</head>
+<body>
+    <h1>View Result All Student</h1>
+    <table border="" cellspacing="0" cellpadding="10">
+        <tr>
+            <th>Id</th>
+            <th>Student Name</th>
+            <th>Standard</th>
+            <th>Div</th>
+            <th>Sub 1</th>
+            <th>Sub 2</th>
+            <th>Sub 3</th>
+            <th>Sub 4</th>
+            <th>Sub 5</th>
+            <th>Total</th>
+            <th>Avg</th>
+            <th>Result</th>
+        </tr>
+        <%result.forEach(function(res){%>
+            <tr>
+                <td><%=res.id%></td>
+                <td><%=res.student_name%></td>
+                <td><%=res.std%></td>
+                <td><%=res.division%></td>
+                <td><%=res.s1%></td>
+                <td><%=res.s2%></td>
+                <td><%=res.s3%></td>
+                <td><%=res.s4%></td>
+                <td><%=res.s5%></td>
+                <td><%=res.total%></td>
+                <td><%=res.avg%></td>
+                <td><%=res.result%></td>
+            </tr>
+        <%})%>
+    </table>
+</body>
+</html>

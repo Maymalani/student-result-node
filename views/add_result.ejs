@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Result</title>
+</head>
+
+<body>
+    <h1>Add Result</h1>
+    <%if(result.length > 0){%>
+        <form method="post">
+            <table>
+                <tr>
+                    <td>Select Student : </td>
+                    <td>
+                        <select name="student">
+                            <option selected disabled>Select Student</option>
+                            <%result.forEach(function(stu){%>
+                                <option value="<%=stu.student_name%>">
+                                    <%=stu.student_name%>
+                                </option>
+                                <%})%>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Standard : </td>
+                    <td><input type="text" name="std" value="<%=result[0].student_std%>"></td>
+                </tr>
+                <tr>
+                    <td>Division : </td>
+                    <td><input type="text" name="div" value="<%=result[0].student_div%>"></td>
+                </tr>
+                <tr>
+                    <td>Subject 1 : </td>
+                    <td><input type="number" name="s1"></td>
+                </tr>
+                <tr>
+                    <td>Subject 2 : </td>
+                    <td><input type="number" name="s2"></td>
+                </tr>
+                <tr>
+                    <td>Subject 3 : </td>
+                    <td><input type="number" name="s3"></td>
+                </tr>
+                <tr>
+                    <td>Subject 4 : </td>
+                    <td><input type="number" name="s4"></td>
+                </tr>
+                <tr>
+                    <td>Subject 5 : </td>
+                    <td><input type="number" name="s5"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Add Result"></td>
+                </tr>
+            </table>
+        </form>
+    <%}else{%>
+        <p>You Have No Any Fail Student To Add Result</p>
+    <%}%>
+    
+</body>
+
+</html>

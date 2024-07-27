@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Transfer Students</title>
+</head>
+<body>
+    <h1>Transfer Students</h1>
+    <%if(result.length > 0){%>
+        <form method="post">
+            <table>
+                <tr>
+                    <td>Select Students : </td>
+                    <td>
+                        <select name="trans_student">
+                            <option selected disabled>Select Student</option>
+                            <%result.forEach(function(stu){%>
+                                <option value="<%=stu.id%>"><%=stu.student_name%></option>
+                            <%})%>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select Standard : </td>
+                    <td>
+                        <select name="trans_student_std">
+                            <option selected disabled>Select Standard</option>
+                            <%stdResult.forEach(function(stu){%>
+                                <option value="<%=stu.std%>"><%=stu.std%></option>
+                            <%})%>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select Division : </td>
+                    <td>
+                        <select name="trans_student_div">
+                            <option selected disabled>Select Division</option>
+                            <%divResult.forEach(function(stu){%>
+                                <option value="<%=stu.division%>"><%=stu.division%></option>
+                            <%})%>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Transfer Student"></td>
+                </tr>
+            </table>
+        </form>
+    <%}else{%>
+        <p>You Have No Pass Student To Transfer</p>
+    <%}%>
+</body>
+</html>

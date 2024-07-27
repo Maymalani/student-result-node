@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+</head>
+
+<body>
+    <h1>Add Student</h1>
+    <form method="post">
+        <table>
+            <tr>
+                <td>Name : </td>
+                <td><input type="text" name="studentName"></td>
+            </tr>
+            <tr>
+                <td>Email : </td>
+                <td><input type="text" name="studentEmail"></td>
+            </tr>
+            <tr>
+                <td>Password : </td>
+                <td><input type="password" name="studentPassword"></td>
+            </tr>
+            <tr>
+                <td>Standard : </td>
+                <td>
+                    <select name="std">
+                        <option selected disabled>Select Std</option>
+                        <%stdResult.forEach(function(std){%>
+                            <option value="<%=std.std%>">
+                                <%=std.std%>
+                            </option>
+                            <%})%>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Division : </td>
+                <td>
+                    <select name="div">
+                        <option selected disabled>Select Div</option>
+                        <%diviResult.forEach(function(div){%>
+                            <option value="<%=div.division%>">
+                                <%=div.division%>
+                            </option>
+                            <%})%>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Roll No : </td>
+                <td><input type="number" name="studentRollNumber"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Add Student"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Staff</title>
+</head>
+<body>
+    <h1>View Staff</h1>
+    <table border="1" cellspacing="0" cellpadding="10">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Standard</th>
+            <th>Division</th>
+        </tr>
+
+        <%result.forEach(function(staff){%>
+            <tr>
+                <td><%=staff.id%></td>
+                <td><%=staff.staffName%></td>
+                <td><%=staff.staffEmail%></td>
+                <td><%=staff.staffPassword%></td>
+                <td><%=staff.std%></td>
+                <td><%=staff.division%></td>
+            </tr>
+            <%})%>
+    </table>
+</body>
+</html>

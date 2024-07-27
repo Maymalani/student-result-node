@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign Staff</title>
+</head>
+<body>
+    <h1>Assign Staff</h1>
+    <form method="post">
+        <table>
+            <tr>
+                <td>Staff Name : </td>
+                <td>
+                    <select name="staff_id">
+                        <option selected disabled>Select Staff</option>
+                        <%staffResult.forEach(function(staff){%>
+                            <option value="<%=staff.id%>">
+                                <%=staff.staffName%>
+                            </option>
+                            <%})%>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Select Std : </td>
+                <td>
+                    <select name="std">
+                        <option selected disabled>Select Std</option>
+                        <%stdResult.forEach(function(std){%>
+                            <option value="<%=std.std%>">
+                                <%=std.std%>
+                            </option>
+                            <%})%>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Select Div : </td>
+                <td>
+                    <select name="div">
+                        <option selected disabled>Select Std</option>
+                        <%divResult.forEach(function(div){%>
+                            <option value="<%=div.division%>">
+                                <%=div.division%>
+                            </option>
+                            <%})%>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Assign Staff"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

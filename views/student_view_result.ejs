@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result View</title>
+</head>
+<body>
+    <h1>Student Result View</h1>
+    <%if(result.length > 0){%>
+        <table border="" cellpadding="10" cellspacing="0">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Std</th>
+                <th>Div</th>
+                <th>s1</th>
+                <th>s2</th>
+                <th>s3</th>
+                <th>s4</th>
+                <th>s5</th>
+                <th>Total</th>
+                <th>Avg</th>
+                <th>Result</th>
+            </tr>
+            <%result.forEach(function(res){%>
+                <tr>
+                    <td><%=res.id%></td>
+                    <td><%=res.student_name%></td>
+                    <td><%=res.std%></td>
+                    <td><%=res.division%></td>
+                    <td><%=res.s1%></td>
+                    <td><%=res.s2%></td>
+                    <td><%=res.s3%></td>
+                    <td><%=res.s4%></td>
+                    <td><%=res.s5%></td>
+                    <td><%=res.total%></td>
+                    <td><%=res.avg%></td>
+                    <td><%=res.result%></td>
+                </tr>
+            <%})%>
+        </table>
+    <%}else{%>
+        <p>Result Not Available</p>
+    <%}%>
+</body>
+</html>

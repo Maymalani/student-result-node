@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Student Standard And Div Wise</title>
+</head>
+<body>
+    <h1>View Student For Standard And Div</h1>
+    <table border="" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Std</th>
+            <th>Div</th>
+        </tr>
+        <%result.forEach(function(std){%>
+            <tr>
+                <td><%=std.id%></td>
+                <td><%=std.student_name%></td>
+                <td><%=std.student_std%></td>
+                <td><%=std.student_div%></td>
+            </tr>
+        <%})%> 
+    </table>
+</body>
+</html>

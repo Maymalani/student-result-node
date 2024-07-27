@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Student Result Std And Div Wise</title>
+</head>
+<body>
+    <h1>View Student Result Std And Div Wise</h1>
+    <%if(result.length > 0){%>
+        <table border="" cellpadding="10" cellspacing="0">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Std</th>
+                <th>Div</th>
+                <th>s1</th>
+                <th>s2</th>
+                <th>s3</th>
+                <th>s4</th>
+                <th>s5</th>
+                <th>Total</th>
+                <th>Avg</th>
+                <th>Result</th>
+            </tr>
+            <%result.forEach(function(std){%>
+                <tr>
+                    <td><%=std.id%></td>
+                    <td><%=std.student_name%></td>
+                    <td><%=std.std%></td>
+                    <td><%=std.division%></td>
+                    <td><%=std.s1%></td>
+                    <td><%=std.s2%></td>
+                    <td><%=std.s3%></td>
+                    <td><%=std.s4%></td>
+                    <td><%=std.s5%></td>
+                    <td><%=std.total%></td>
+                    <td><%=std.avg%></td>
+                    <td><%=std.result%></td>
+                </tr>
+            <%})%> 
+        </table>
+    <%}else{%>
+        <p>There Is No Students For Selected Standard And Divison</p>
+        <%}%>
+</body>
+</html>
